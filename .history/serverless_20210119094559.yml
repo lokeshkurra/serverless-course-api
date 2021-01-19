@@ -41,7 +41,7 @@ provider:
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
-  # - path: url path is /course
+  # - path: url path is /notes
   # - method: POST request
   create:
     handler: create.main
@@ -49,40 +49,3 @@ functions:
       - http:
           path: course
           method: post
-  get:
-    # Defines an HTTP API endpoint that calls the main function in get.js
-    # - path: url path is /course/{id}
-    # - method: GET request
-    handler: get.main
-    events:
-      - http:
-          path: course/{id}
-          method: get
-
-  list:
-    # Defines an HTTP API endpoint that calls the main function in list.js
-    # - path: url path is /course
-    # - method: GET request
-    handler: list.main
-    events:
-      - http:
-          path: course
-          method: get
-  update:
-    # Defines an HTTP API endpoint that calls the main function in update.js
-    # - path: url path is /course/{id}
-    # - method: GET request
-    handler: update.main
-    events:
-      - http:
-          path: course/{id}
-          method: put
-  delete:
-    # Defines an HTTP API endpoint that calls the main function in update.js
-    # - path: url path is /course/{id}
-    # - method: GET request
-    handler: delete.main
-    events:
-      - http:
-          path: course/{id}
-          method: delete
